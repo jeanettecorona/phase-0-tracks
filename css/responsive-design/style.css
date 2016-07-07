@@ -12,7 +12,9 @@ cite {
 #external-links ul {
   list-style-type: none;
   padding-left: 0px;
+  min-width: 80%;
 }
+
 
 /* you're welcome to edit the
 image, figure, and figcaption CSS if you'd like, 
@@ -30,3 +32,33 @@ figcaption {
   font-style: italic;
   text-align: right;
 }
+body {
+  max-width: 960px;
+
+ 
+} 
+main {
+  width: 80%;
+  float: right;
+  display: block;
+  vertical-align: text-top;
+}
+/*}
+* { outline: 1px solid red; }
+*/
+
+@media screen and (max-width: 500px) {
+  body {
+    font-size: 50%;}
+  }
+
+@media screen and (max-width: 800px) {
+  #content {
+    width: 100%;}
+  }
+
+
+/* @media screen and (max-width: 500px) {
+  body {
+    background-color: hotpink;
+*/
