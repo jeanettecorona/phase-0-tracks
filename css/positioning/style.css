@@ -1,0 +1,23 @@
+body {
+	margin-top: 80px;
+	margin-left: 100px;
+}
+
+#octopus {
+	position: relative;
+	display: block;
+	margin: auto;
+	width: 45%;
+}
+
+#glasses {
+	position: absolute;
+	margin-top: -190px;
+	margin-left: 28.5%;
+}
+
+#hat {
+	position: absolute;
+	top: 19px;
+	left: 31.5%;
+}
