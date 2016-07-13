@@ -1,0 +1,38 @@
+4.2 Algorithms
+
+Release 0
+USING AN ELEVATOR
+- Approach the elevator doors
+- Decide which direction you want to ride
+	- If up: press the up arrow
+	- If down: press the down arrow
+- Wait until the doors open
+- Walk inside the elevator
+- Turn around to face the buttons
+- Stand away from the doors and wait for doors to close
+- Lift arm 
+- Press the button for which floor you want to go to
+	- If you want to go to floor 1, press 1
+	- If you want to go to floor 2, press 2, etc.
+	- If you want to go to basement, press B
+	- If you want to go to the ground floor, press G
+- Wait until you have arrived at the appropriate floor
+	- If others have requested to use the elevator, you might have to wait
+	- The elevator will move up (or down) in ascending (or descending) numerical order
+- Exit the elevator
+
+
+Release 1
+WASHING THE DISHES
+- Prepare the sponge
+	- Pick up the sponge and squeeze dish soap (1-2 squirts)
+	- Wet the sponge by turning on the cold water knob and the hot water knob to achieve warm water
+	- Turn off the water 
+- Wash the dishes
+	- Pick up one dish at a time
+	- Scrub the dish with the sponge
+	- Make sure all the dirty spots are scrubbed off 
+- Rinse the dishes
+	- Turn on the water again and rinse the suds off of the dish
+	- Make sure all the suds are gone
+	- Place the dish on the dish rack next to the sink
