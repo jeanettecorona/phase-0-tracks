@@ -4,10 +4,10 @@ name = gets.chomp
 
 puts "Volume level (1-10)"
 
-volume = gets.chomp
+volume = gets.chomp.to_i
 
-if volume.is_a? String
-  volume = volume.to_i
+if volume == 0
+  volume = nil
 else
 end
 
@@ -21,16 +21,15 @@ candidate = gets.chomp
 
 puts "Estimated age?"
 
-age = gets.chomp
+age = gets.chomp.to_i
 
-if age.is_a? String
-  age = age.to_i
-  
-elsif age == ""
+if age == 0
   age = nil
-  
 else
 end
 
-puts age
-puts volume
+puts "Hamster Name: #{name}"
+puts "Volume Level: #{volume}"
+puts "Fur Color: #{furcolor}"
+puts "Candidate For Adoption: #{candidate}"
+puts "Hamster Age: #{age}"
