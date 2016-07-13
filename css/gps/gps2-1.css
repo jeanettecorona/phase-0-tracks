@@ -7,13 +7,13 @@ body {
 header {
   background-color: white;
   border: 2px solid black;
-  padding: 10px;
+  padding: 9px;
   width: 95%;
 }
 
 section {
   background-color: white; 
-  padding: 10px;
+  padding: 9px;
   border: 2px solid black;
   margin-top: 10px;
 }
