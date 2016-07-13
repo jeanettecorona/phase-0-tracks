@@ -36,3 +36,6 @@ WASHING THE DISHES
 	- Turn on the water again and rinse the suds off of the dish
 	- Make sure all the suds are gone
 	- Place the dish on the dish rack next to the sink
+- Repeat
+	- Pick up the next dish and repeat the same process of scrubbing and rinsing until all dishes in the sink have been washed and placed on the rack
+
