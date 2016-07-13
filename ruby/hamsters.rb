@@ -6,6 +6,11 @@ puts "Volume level (1-10)"
 
 volume = gets.chomp
 
+if volume.is_a? String
+  volume = volume.to_i
+else
+end
+
 puts "Fur color"
 
 furcolor = gets.chomp
@@ -18,9 +23,14 @@ puts "Estimated age?"
 
 age = gets.chomp
 
-if age == ""
+if age.is_a? String
+  age = age.to_i
+  
+elsif age == ""
   age = nil
+  
 else
 end
 
 puts age
+puts volume
