@@ -23,6 +23,16 @@ puts "Our company cafeteria serves garlic bread. Should we order some for you?"
 puts "Would you like to enroll in the company's health insurance?"
 	health_insurance = gets.chomp
 
+puts "Please list any allergies one at a time."
+	allergies = gets.chomp
+
+	until allergies == "done"
+		puts "If more, keep going and type done when you are finished."
+			allergies = gets.chomp
+		break if allergies == "sunshine"
+	end
+
+
 	if name == "Drake Cula" || name == "Tu Fang"
 		is_vampire = true
 	else
@@ -51,11 +61,11 @@ puts "Would you like to enroll in the company's health insurance?"
 case
 when (likes_garlic_bread || wants_insurance) && !wrong_age
 	puts "Probably not a vampire."
-when ( !likes_garlic_bread || !wants_insurance) && wrong_age
+when ( !likes_garlic_bread || !wants_insurance) && wrong_age || allergies = "sunshine"
 	puts "Probably a vampire."	
-when !likes_garlic_bread && !wants_insurance && !wrong_age
+when !likes_garlic_bread && !wants_insurance && !wrong_age 
 	puts "Almost certainly a vampire."
-when is_vampire
+when is_vampire = true
 	puts "Definitely a vampire."
 else
 	puts "Results inconclusive."
@@ -63,3 +73,7 @@ end
 
 employees -= 1
 end
+
+puts "Actually, never mind! What do these questions have to do with anything? Let's all be friends."
+
+exit
