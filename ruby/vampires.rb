@@ -31,6 +31,7 @@ puts "Please list any allergies one at a time."
 			allergies = gets.chomp
 		break if allergies == "sunshine"
 	end
+	# I can't seem to get the allergies loop to break at "sunshine"
 
 
 	if name == "Drake Cula" || name == "Tu Fang"
