@@ -1,4 +1,5 @@
-# NEW EMPLOYEE INTERVIEW - WEREFOLF, INC.
+
+# NEW EMPLOYEE INTERVIEW - WEREFOLF, INC
 
 # Ask questions
 
@@ -53,5 +54,3 @@ puts "Would you like to enroll in the company's health insurance?"
 	else
 		puts "Results inconclusive."
 	end
-
-
