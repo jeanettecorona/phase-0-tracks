@@ -34,3 +34,37 @@ puppy.speak(5)
 puppy.roll_over
 puppy.dog_years(2)
 puppy.lick("cheek")
+
+
+class Chores
+
+	def initialize
+		puts "Initializing new chore instance..."
+	end
+
+	def sweep(location)
+		puts "Sweep the #{location}."
+	end
+
+	def dust(object)
+		puts "Dust the #{object}."
+	end
+
+end
+
+chores = []
+
+50.times do |i|
+	chore = Chores.new
+	chores << chore
+end
+
+chores.each do |chore|
+	chore.sweep("bathroom")
+	chore.dust("cabinet")
+end
+
+
+chore = Chores.new
+chore.sweep("bathroom")
+chore.dust("cabinet")
