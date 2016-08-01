@@ -7,14 +7,16 @@ class Santa
 # Gender, which will be a string passed in on initialization
 # Ethnicity, which will be a string passed in on initialization
 
-  def initialize(gender, ethinicity)
+  def initialize(gender, ethnicity)
     puts "Initialize Santa instance ..."
     @gender = gender
     puts "Gender: #{@gender}"
-    @ethinicity = ethinicity
-    puts "Ethinicity: #{@ethinicity}"
+    @ethnicity = ethnicity
+    puts "Ethnicity: #{@ethnicity}"
     @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
     puts "Reindeer ranking: #{@reindeer_ranking}"
+    @age = 0
+    puts "Age: #{@age}"
   end
 
 # Write speak method
@@ -33,19 +35,36 @@ class Santa
     #puts "Reindeer Ranking: #{@reindeer_ranking}"
   #end
 
-# Age, which is not passed in on initialization and defaults to 0
-
-  def reindeer_age(age=0)
-    @age = age
-    puts "Age: #{@age}"
+  def celebrate_birthday
+    @age = @age + 1
+    puts "Happy Birthday: #{@age}"
   end
 
+  def get_mad_at(bad_reindeer)
+    @bad_reindeer = bad_reindeer
+    @reindeer_ranking.delete(bad_reindeer)
+    @reindeer_ranking << @bad_reindeer.to_s
+      puts "New ranking: #{@reindeer_ranking}"
+  end
 
-end
+# Setter to be able to change gender
+  def gender=(new_gender)
+    @gender = new_gender
+  end
+
+# Getter to access age and ethnicity outside of the class
+  def age
+    @age
+  end
+
+  def ethnicity
+    @ethnicity
+  end
+
+  end
 
 # Check that you're able to initialize a Santa instance and call the methods above
 santa = Santa.new("female", "Mexican")
-santa.reindeer_age
 santa.speak
 santa.eat_milk_and_cookies("oatmeal")
 
@@ -62,4 +81,11 @@ end
 #example_genders.length.times do |i|
 #  santas << Santa.new(example_genders[i], example_ethnicities[i])
 #end
+
+# Add three attribute-changing methods to your Santa class
+santa.celebrate_birthday
+santa.get_mad_at("Vixen")
+puts "Santa is #{santa.age} and #{santa.ethnicity}"
+
+
 
