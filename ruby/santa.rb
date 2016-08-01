@@ -2,22 +2,22 @@
 # Define Class
 
 class Santa
-  attr_reader :age, :ethnicity
-  attr_accessor :gender
+  attr_reader :ethnicity
+  attr_accessor :gender, :age
 
 # Write initialize method
 # Gender, which will be a string passed in on initialization
 # Ethnicity, which will be a string passed in on initialization
 
   def initialize(gender, ethnicity)
-    puts "Initialize Santa instance ..."
+    #puts "Initialize Santa instance ..."
     @gender = gender
     puts "Gender: #{@gender}"
     @ethnicity = ethnicity
     puts "Ethnicity: #{@ethnicity}"
     @reindeer_ranking = ["Rudolph", "Dasher", "Dancer", "Prancer", "Vixen", "Comet", "Cupid", "Donner", "Blitzen"]
     puts "Reindeer ranking: #{@reindeer_ranking}"
-    @age = 0
+    @age = age
     puts "Age: #{@age}"
   end
 
@@ -49,45 +49,54 @@ class Santa
       puts "New ranking: #{@reindeer_ranking}"
   end
 
-# Setter to be able to change gender
-  def gender=(new_gender)
-    @gender = new_gender
+# # Setter to be able to change gender
+#   def gender=(new_gender)
+#     @gender = new_gender
+#   end
+
+# # Getter to access age and ethnicity outside of the class
+#   def age
+#     @age
+#   end
+
+#   def ethnicity
+#     @ethnicity
+#   end
+
   end
 
-# Getter to access age and ethnicity outside of the class
-  def age
-    @age
-  end
+# # Check that you're able to initialize a Santa instance and call the methods above
+# santa = Santa.new("female", "Mexican")
+# santa.speak
+# santa.eat_milk_and_cookies("oatmeal")
 
-  def ethnicity
-    @ethnicity
-  end
+# #santas = []
+# #example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
+# #example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
+# #example_genders.length.times do |i|
+# #  santas << Santa.new(example_genders[i], example_ethnicities[i])
+# #end
 
-  end
-
-# Check that you're able to initialize a Santa instance and call the methods above
-santa = Santa.new("female", "Mexican")
-santa.speak
-santa.eat_milk_and_cookies("oatmeal")
+# # Add three attribute-changing methods to your Santa class
+# santa.celebrate_birthday
+# santa.get_mad_at("Vixen")
+# puts "Santa is #{santa.age} and #{santa.ethnicity}"
 
 santas = []
 genders = ["Trans", "Male", "Female", "Thinking about it"] 
 ethnicities = ["Windling", "Earthling", "Fireling", "Waterling"]
-genders.length.times do |i|
-		santas << Santa.new(genders[i], ethnicities[i])
+# genders.length.times do |i|
+#     santas << Santa.new(genders[i], ethnicities[i])
+# end
+
+# Create 100 Santas with random age and ethnicity
+1000.times do |i|
+  santa = Santa.new(genders.sample, ethnicities.sample)
+  santa.age = rand(140)
+  puts santa.age
+  puts ""
 end
 
-#santas = []
-#example_genders = ["agender", "female", "bigender", "male", "female", "gender fluid", "N/A"]
-#example_ethnicities = ["black", "Latino", "white", "Japanese-African", "prefer not to say", "Mystical Creature (unicorn)", "N/A"]
-#example_genders.length.times do |i|
-#  santas << Santa.new(example_genders[i], example_ethnicities[i])
-#end
-
-# Add three attribute-changing methods to your Santa class
-santa.celebrate_birthday
-santa.get_mad_at("Vixen")
-puts "Santa is #{santa.age} and #{santa.ethnicity}"
 
 
 
