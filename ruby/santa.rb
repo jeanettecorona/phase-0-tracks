@@ -2,6 +2,8 @@
 # Define Class
 
 class Santa
+  attr_reader :age, :ethnicity
+  attr_accessor :gender
 
 # Write initialize method
 # Gender, which will be a string passed in on initialization
