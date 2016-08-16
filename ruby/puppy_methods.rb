@@ -1,70 +1,68 @@
-class Puppy
+# class Puppy
 
-	def initialize
-		puts "Initializing new puppy instance..."
-	end
+#   def initialize
+#     puts "Initializing puppy instance..."
+#   end
 
-  def fetch(toy)
-    puts "I brought back the #{toy}!"
-    toy
+#   def fetch
+#     puts "*fetches ball*"
+#   end
+
+#   def speak(int)
+#     puts "Woof! " * int 
+#   end
+
+#   def roll_over
+#     puts "*rolls over*"
+#   end
+
+#   def dog_years(int)
+#     years = int * 7
+#     puts "You are #{years} years old!"
+#   end
+
+#   def cuddle
+#     puts "*snuggles*"
+#   end
+
+# end
+
+# # Driver Code
+# puppy = Puppy.new
+# puppy.fetch
+# puppy.speak(3)
+# puppy.roll_over
+# puppy.dog_years(3)
+# puppy.cuddle
+
+class Guess
+
+  def initialize
+    puts "Initializing Guessing Game..."
   end
 
-  def speak(i)
-  	puts "Woof! " * i		
+  def pick_num
+    num = rand(50)
+    puts "*picks a number 1-50: #{num}*"
   end
 
-  def roll_over
-  	puts "*rolls over*"
+  def cheer
+    puts "Hooray!"
   end
 
-  def dog_years(i)
-  	dog_years = i * 7
-  	p dog_years
-  end
-
-  def lick(object)
-  	puts "I licked your #{object}!"
-  end
 end
 
-puppy = Puppy.new
+guesses = []
 
-puppy.fetch("chew bone")
-puppy.speak(5)
-puppy.roll_over
-puppy.dog_years(2)
-puppy.lick("cheek")
-
-
-class Chores
-
-	def initialize
-		puts "Initializing new chore instance..."
-	end
-
-	def sweep(location)
-		puts "Sweep the #{location}."
-	end
-
-	def dust(object)
-		puts "Dust the #{object}."
-	end
-
+50.times do
+guess = Guess.new
+guesses << guess
+# guess.pick_num
+# guess.cheer
 end
 
-chores = []
-
-50.times do |i|
-	chore = Chores.new
-	chores << chore
+# Same as lines 60-61
+guesses.each do |num| 
+  num.pick_num
+  num.cheer
 end
-
-chores.each do |chore|
-	chore.sweep("bathroom")
-	chore.dust("cabinet")
-end
-
-
-chore = Chores.new
-chore.sweep("bathroom")
-chore.dust("cabinet")
