@@ -4,25 +4,30 @@
 # We spent [#] hours on this challenge.
 
 # EXPLANATION OF require_relative
-#
-#
+# /Desktop/Devbootcamp/phase-0-tracks/ruby/gps6/state_data.rb
+# Require relative = why: using your own code (must provide relative path)
+# Require = why: using external code
 require_relative 'state_data'
 
 class VirusPredictor
 
+# Initialize the three variables in the class
   def initialize(state_of_origin, population_density, population)
     @state = state_of_origin
     @population = population
     @population_density = population_density
   end
 
+# Passing two methods inside and printing the results for each
   def virus_effects
     predicted_deaths(@population_density, @population, @state)
     speed_of_spread(@population_density, @state)
   end
 
+# Anything below "private" should not be changed
   private
 
+# Calculates the deaths based on the population and turns it into an integer 
   def predicted_deaths(population_density, population, state)
     # predicted deaths is solely based on population density
     if @population_density >= 200
@@ -41,6 +46,7 @@ class VirusPredictor
 
   end
 
+# Calculates the speed of spread for the deadly influenza in months
   def speed_of_spread(population_density, state) #in months
     # We are still perfecting our formula here. The speed is also affected
     # by additional factors we haven't added into this functionality.
@@ -85,3 +91,7 @@ alaska.virus_effects
 
 #=======================================================================
 # Reflection Section
+
+# write outside of class to minimize bugs
+
+# finish challenge and think about the why
