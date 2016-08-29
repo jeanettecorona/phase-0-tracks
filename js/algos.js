@@ -1,8 +1,23 @@
-// find the longest string within an array
-	// for each string in the array
-		// split the strints
-		// count how many letters are in each string
+// Release 0
 
-function longestWord(str){
+// Loop through an array
+// Create empty string
+// Find the length of each item in the array 
+// Compare lengths of each item
+// Reassign to new variable
+// Return item with longest length
 
+function longest_string(words) {
+  var largest = 0;
+  var longestWord = " ";
+
+for (var i = 0; i < words.length; i++) {
+    if (words[i].length > largest) {
+    largest = words[i].length;
+    longestWord = words[i];
+    } 
 }
+	return longestWord 
+}
+
+console.log(longest_string(["str", "strr", "String"]));
