@@ -1,0 +1,24 @@
+sqlite> SELECT users.firstname, users.lastname, biz.name, reviews.starts, reviews.comment
+   ...> FROM biz
+   ...> JOIN reviews
+   ...> ON reviews.business_id = biz.id
+   ...> JOIN users
+   ...> on users.id = reviews.user_id
+   ...> ;
+firstname   lastname    name            starts      comment                                              
+----------  ----------  --------------  ----------  -----------------------------------------------------
+Bradford    Pitt        Grunchy Hollow  3           Great wedding chapel, wish there were fortune cookies
+Mandy       Kaling      Amir's Towing   4           Strong drinks                                        
+Angela      Jolie       Grunchy Hollow  3           Wish the organ player wasn't drunk                   
+Bradford    Pitt        The Beagle      1           His tow truck was a rickshaw 
+
+
+OR
+
+sqlite> SELECT users.firstname, users.lastname, biz.name, reviews.starts, reviews.comment
+   ...> FROM users
+   ...> JOIN reviews
+   ...> ON reviews.user_id = users.id
+   ...> JOIN biz
+   ...> ON biz.id = reviews.business_id
+   ...> ;
